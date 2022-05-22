@@ -5,25 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
-        body{
-            margin:0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
+        video{
+            margin:0 auto;
+            padding: 0 auto;
+            margin-left: auto ;
+            margin-right: auto;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
         }
         canvas{
             position: absolute;
         }
+        #heading{
+            margin: 0%;
+            padding: 0%;
+            color: azure;
+            display: none;
+        }
+        body{
+            background-color: black;
+            font-family: sans-serif;
+            align-items: center;
+            display: flex;
+        }
+        .box{
+            width: 300px;
+            padding: 30px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+        .box h1{
+            color: azure;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .box input[type="text"],.box input[type="password"]
+        {
+            border: 0ch;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 3px solid #0367fd;
+            padding: 14px 10px;
+            width: 220px;
+            outline: none;
+            color: aliceblue;
+            border-radius: 24px;
+            transition: 0.25px;
+        }
+        .box input[type="text"]:focus,.box input[type="password"]:focus{
+            width: 270px;
+            border-color: antiquewhite;
+        }
+        .box input[type="submit"]{
+            border: 0ch;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 3px solid antiquewhite;
+            padding: 14px 35px;
+            outline: none;
+            color: aliceblue;
+            border-radius: 24px;
+            transition: 0.25px;
+            cursor: pointer;
+        }
+        
     </style>
 </head>
 <body>
+    
     <video id="videoInput" width="720p" height="550" muted controls></video>
     <script defer async src="./js/face-api.min.js"></script>
     <script defer async src="./js/script.js"></script>
+    <form class="box" action="index.html" method="post"></form>
+    <div id="form">
+    <h1 id="heading">
+        login
+    </h1>
+    <input type="text" name="" placeholder="Enter Username" id="username">
+    <input type="password" name="" placeholder="Enter Password" id="password">
+    <input type="submit" name="" value="Login">
+</div>
+    
+    <script src="login.js"></script>
 </body>
 </html>

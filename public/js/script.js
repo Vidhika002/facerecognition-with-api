@@ -1,13 +1,16 @@
 const video = document.getElementById('videoInput')
-
+const head = document.getElementById('heading')
 Promise.all([
     faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
     faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
     faceapi.nets.ssdMobilenetv1.loadFromUri('/models') //heavier/accurate version of tiny face detector
 ]).then(start)
 
+var attendance = new Set([]);
+
+
 function start() {
-    document.body.append('Models Loaded')
+    //document.body.append('Models Loaded')
     
     navigator.getUserMedia(
         { video:{} },
@@ -48,11 +51,20 @@ async function recognizeFaces() {
                 return faceMatcher.findBestMatch(d.descriptor)
             })
             results.forEach( (result, i) => {
+                attendance.add(result.label.toString())
+                for(let item of attendance){
+                    if(item=='Vidhika'){
+                       video.style.display='none';
+                       heading.style.display='contents';
+                       canvas.style.display='none';
+
+                    }
+                }
                 const box = resizedDetections[i].detection.box
                 const drawBox = new faceapi.draw.DrawBox(box, { label: result.toString() })
                 drawBox.draw(canvas)
             })
-        }, 100)
+        }, 2000)
 
 
         
@@ -61,19 +73,22 @@ async function recognizeFaces() {
 
 
 function loadLabeledImages() {
-    const labels = ['Black Widow', 'Captain America', 'Hawkeye' , 'Jim Rhodes', 'Tony Stark', 'Thor', 'Captain Marvel']
-    //const labels = ['Vidhika'] // for WebCam
+    const labels = ['Black Widow', 'Captain America', 'Hawkeye' ,'Vidhika', 'Jim Rhodes', 'Tony Stark', 'Thor', 'Captain Marvel']
+    //const labels = ['Prashant Kumar'] // for WebCam
     return Promise.all(
         labels.map(async (label)=>{
             const descriptions = []
-            for(let i=1; i<=5; i++) {
+            for(let i=1; i<=2; i++) {
                 const img = await faceapi.fetchImage(`../labeled_images/${label}/${i}.jpg`)
                 const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
                 console.log(label + i + JSON.stringify(detections))
                 descriptions.push(detections.descriptor)
             }
-            document.body.append(label+' Faces Loaded | ')
+            //document.body.append(label+' Faces Loaded | ')
+            
             return new faceapi.LabeledFaceDescriptors(label, descriptions)
         })
     )
 }
+
+
