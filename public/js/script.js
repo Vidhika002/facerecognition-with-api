@@ -1,5 +1,9 @@
 const video = document.getElementById('videoInput')
 const head = document.getElementById('heading')
+const food = document.getElementById('food')
+const vid = document.getElementById('video')
+const mew = document.getElementsByClassName('new')
+
 Promise.all([
     faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
     faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
@@ -52,19 +56,22 @@ async function recognizeFaces() {
             })
             results.forEach( (result, i) => {
                 attendance.add(result.label.toString())
-                for(let item of attendance){
-                    if(item=='Vidhika'){
-                       video.style.display='none';
-                       heading.style.display='contents';
-                       canvas.style.display='none';
-
-                    }
-                }
+                // for(let item of attendance){
+                //     if(item=='Vidhika'){
+                //        video.style.display='none';
+                //        canvas.style.display='none';
+                //     //    food.style.display='block';
+                //     //    document.body.style.backgroundColor = 'red';
+                //        vid.style.display='none';
+                //        window.open("https://food-delivery-app-beta.vercel.app/","_self")
+                       
+                //     }
+                // }
                 const box = resizedDetections[i].detection.box
                 const drawBox = new faceapi.draw.DrawBox(box, { label: result.toString() })
                 drawBox.draw(canvas)
             })
-        }, 2000)
+        }, 100)
 
 
         
@@ -73,7 +80,7 @@ async function recognizeFaces() {
 
 
 function loadLabeledImages() {
-    const labels = ['Black Widow', 'Captain America', 'Hawkeye' ,'Vidhika', 'Jim Rhodes', 'Tony Stark', 'Thor', 'Captain Marvel']
+    const labels = ['Black Widow', 'Hawkeye' ,'Vidhika', 'Captain Marvel']
     //const labels = ['Prashant Kumar'] // for WebCam
     return Promise.all(
         labels.map(async (label)=>{

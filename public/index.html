@@ -8,98 +8,76 @@
     
     <style>
         video{
-            margin:0 auto;
+            /* margin:0 auto;
             padding: 0 auto;
             margin-left: auto ;
-            margin-right: auto;
+            margin-right: auto; */
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin-left:100px ;
+            /* margin-top: 100px; */
 
+
+        }
+        .new{
+            display: none;
+        }
+        #video{
+            /* background-color: #080710; */
+            background-image: url("food.png");
+            background-size: cover
         }
         canvas{
             position: absolute;
         }
         #heading{
-            margin: 0%;
-            padding: 0%;
+            
             color: azure;
-            display: none;
+            
+            
         }
         body{
-            background-color: black;
+            
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-color: #080710;
             font-family: sans-serif;
-            align-items: center;
-            display: flex;
+            margin-right: 200px;
+            /* display: flex; */
+            color: #e5e5e5;
+            
         }
-        .box{
-            width: 300px;
-            padding: 30px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-        }
-        .box h1{
-            color: azure;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-        .box input[type="text"],.box input[type="password"]
-        {
-            border: 0ch;
-            background: none;
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-            border: 3px solid #0367fd;
-            padding: 14px 10px;
-            width: 220px;
-            outline: none;
-            color: aliceblue;
-            border-radius: 24px;
-            transition: 0.25px;
-        }
-        .box input[type="text"]:focus,.box input[type="password"]:focus{
-            width: 270px;
-            border-color: antiquewhite;
-        }
-        .box input[type="submit"]{
-            border: 0ch;
-            background: none;
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-            border: 3px solid antiquewhite;
-            padding: 14px 35px;
-            outline: none;
-            color: aliceblue;
-            border-radius: 24px;
-            transition: 0.25px;
-            cursor: pointer;
-        }
+         
+
+.vid{
+    font-family: 'Poppins' ,sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    
+}
+
+
+
         
     </style>
 </head>
 <body>
+    <div id="video">
+        <h3 class="vid">Login using Camera</h3>
+        <video id="videoInput" width="620p" height="450" muted controls></video>
+        
+    </div>
     
-    <video id="videoInput" width="720p" height="550" muted controls></video>
     <script defer async src="./js/face-api.min.js"></script>
     <script defer async src="./js/script.js"></script>
-    <form class="box" action="index.html" method="post"></form>
-    <div id="form">
-    <h1 id="heading">
-        login
-    </h1>
-    <input type="text" name="" placeholder="Enter Username" id="username">
-    <input type="password" name="" placeholder="Enter Password" id="password">
-    <input type="submit" name="" value="Login">
-</div>
+
+
     
-    <script src="login.js"></script>
+
+    
+
 </body>
 </html>
