@@ -56,17 +56,17 @@ async function recognizeFaces() {
             })
             results.forEach( (result, i) => {
                 attendance.add(result.label.toString())
-                // for(let item of attendance){
-                //     if(item=='Vidhika'){
-                //        video.style.display='none';
-                //        canvas.style.display='none';
-                //     //    food.style.display='block';
-                //     //    document.body.style.backgroundColor = 'red';
-                //        vid.style.display='none';
-                //        window.open("https://food-delivery-app-beta.vercel.app/","_self")
+                for(let item of attendance){
+                    if(item=='Vidhika'){
+                       video.style.display='none';
+                       canvas.style.display='none';
+                    //    food.style.display='block';
+                    //    document.body.style.backgroundColor = 'red';
+                       vid.style.display='none';
+                       window.open("https://food-delivery-app-beta.vercel.app/","_self")
                        
-                //     }
-                // }
+                    }
+                }
                 const box = resizedDetections[i].detection.box
                 const drawBox = new faceapi.draw.DrawBox(box, { label: result.toString() })
                 drawBox.draw(canvas)
