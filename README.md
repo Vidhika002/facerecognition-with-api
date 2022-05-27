@@ -9,7 +9,7 @@ Some of the Major technologies used:
 
 Prerequisite to run the cod ein local environment : NodeJS installed 
 ## Steps to run code in local environment:
-1. Initialize npm by npi i express command.
+1. Initialize npm by npm i express command.
 2. Run node src/app.js 
 3. open http://localhost:8000/ in your browser.
 
