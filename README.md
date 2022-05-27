@@ -17,4 +17,5 @@ Note:If the code isn't running try refreshing the page.
 
 This application uses the pre-feed data and login you to the page.Login can also be done through Username and password.To login through camera you need to first
 store your photos in a file by your name in the folder 'labeled_images'. Also donot forget to add your file name in the array in script.js file.
+
 Congratulations! You are good to GO now.
