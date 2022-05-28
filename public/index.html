@@ -5,187 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
-    <style>
-        
-        
-        canvas{
-                position: absolute;
-                top: 106px;
-                left: 9px;
-                z-index: 10;
-                position: absolute;
-        }
-        body{
-            display: flex;
-            background-color: black;
-            vertical-align: middle;
-        }
-        video{
-            margin-left: 30px;
-        }
-        
-        
-         
-
-
-#login{
-    display:none;
-    /* display: inline-flex; */
-  height: 40px;
-  width: 150px;
-  border: 2px solid #BFC0C0;
-  margin: 20px 20px 20px 20px;
-  color: #BFC0C0;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  margin-left: 600px;
-  margin-top: 200px;
-}
-
-/* username css */
-form{
-    height: 520px;
-    width: 400px;
-    padding: 30px;
-    background-color: rgba(255,255,255,0.13);
-    /* position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%; */
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    margin-left: 230px;
-    margin-top: 30px;
-    background-color: rgba(255,255,255,0.13);
-    
-}
-form *{
-    font-family: 'Poppins',sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-}
-form h3{
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-    color: rgb(55, 112, 125);
-}
-label{
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 500;
-}
-input{
-    display: block;
-    height: 50px;
-    width: 96%;
-    background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
-}
-::placeholder{
-    color: #e5e5e5;
-}
-/* #play{
-    position: relative;
-  width: 250px;
-  height: 50px;
-  margin: 20px;
-  line-height: 60px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--color-white);
-  transition: var(--speed-normal);
-  border: 5px solid var(--color-red);
-} */
-#play{
-  text-decoration: none;
-  border: 3px solid rgb(55, 112, 125);
-  color: transparent;
-  padding: 10px 40px;
-  font-size: 20px;
-  font-family: 'Poppins',sans-serif;
-  letter-spacing: 0.5px;
-  transition: all 0.5s;
-  position: relative;
-  margin-left: 200px;
-  margin-bottom: 30px;
-  
-}
-#play:before {
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(55, 112, 125);
-  background: rgb(34, 34, 34);
-  font-size: 20px;
-  top: 0;
-  left: 100%;
-  font-family: 'Poppins',sans-serif;
-  letter-spacing: 2px;
-  transition: all 1s;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transform: scale(0) rotatey(0);
-  opacity: 0;
-}
-#play:hover:before {
-  transform: scale(1) rotatey(360deg);
-  left: 0;
-  opacity: 1;
-}
-#play:after {
-  content: "Login with Face Id";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(55, 112, 125);
-  background: rgb(34, 34, 34);
-  font-size: 20px;
-  top: 0;
-  left: 0;
-  font-family: 'Poppins',sans-serif;
-  letter-spacing: 2px;
-  transition: all 1s;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transform: scale(1) rotatey(0);
-  opacity: 1;
-}
-/* #play:hover:after {
-  transform: scale(0) rotatey(360deg);
-  left: -100%;
-  opacity: 0;
-} */
-
-
-
-
-
-
-
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -197,12 +17,12 @@ input{
     <br>
     <video id="videoInput" width="620p" height="450" muted controls autoplay></video>
         <br>
-    <button type="button" id="login">Click here to login</button>
+    
 
     <script defer async src="./js/face-api.min.js"></script>
     <script defer async src="./js/script.js"></script>
 </div>
-
+<button type="button" id="login">Click here to login</button>
 
 <!-- login with username -->
 

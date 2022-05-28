@@ -1,284 +1,154 @@
-/* CSS Reset */
-
-
-html{
-    scroll-behavior: smooth;
-    background-color:  rgb(173, 168, 168);
-}
-
-/* CSS Variables */
-:root{
-    --navbar-height: 59px;
-}
-
-/* Navigation Bar */
-#navbar{
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0px;
-}
-
-#navbar::before{
-    content: "";
-    background-color: black;
+canvas{
     position: absolute;
-    top:0px;
-    left:0px;
-    height: 100%;
-    width:100%;
-    z-index: -1;
-    opacity: 0.7;
-}
-
-/* Navigation Bar: Logo and Image */
-#logo{
-    margin: 10px 34px;
-}
-
-#logo img{
-    height: 59px;
-    margin: 3px 6px;
-}
-
-
-/* Navigation Bar: List Styling */
-
-#navbar ul{
-    display: flex;
-    font-family: 'Baloo Bhai', cursive;
-}
-
-#navbar ul li{ 
-    list-style: none;
-    font-size: 1.3rem;
-}
-
-#navbar ul li a{
-    color: white;
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-#navbar ul li a:hover{
-    color: black;
-    background-color: white;
-}
-
-/* Home Section */
-#home{
-    display: flex;
-    flex-direction: column;
-    padding:3px 200px;
-    height: 550px;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-
-#home::before{ 
-    content: "";
+    top: 106px;
+    left: 9px;
+    z-index: 10;
     position: absolute;
-    background: url('https://img.freepik.com/free-photo/top-view-circular-food-frame_23-2148723455.jpg?t=st=1653366971~exp=1653367571~hmac=a4943746d9e6903979966ecb882a5f8549c44575c8de5a046a848639c1e01ec1&w=996') no-repeat center center/cover ;
-    
-    height: 642px;
-    top:0px;
-    left:0px;
-    width: 100%;
-    z-index: -1;
-    opacity:0.89;
 }
-
-#home h1{
-    color:black;
-    text-align: center;
-    font-family: 'Bree Serif', serif;
+body{
+display: flex;
+background-color: black;
+vertical-align: middle;
 }
-
-#home p{
-    color:black;
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Bree Serif', serif;
-}
-/* Services Section */
-#services{
-    margin: 5px;
-    display: flex;
-}
-#services .box{ 
-    border: 2px solid brown;
-    /* padding: 30px; */
-    margin: 2px 10px;
-    border-radius: 28px;
-    background: #f2f2f2;
-    margin-bottom: 20px;
-}
-
-#services .box img{ 
-   /* height: 240px;
-   width: 315px; */
-   margin: 0px;
-   object-fit: cover;
-   display: block;
-   /* height: 40%; */
-   width: 100%;
-   /* border-radius: inherit; */
-   border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    /* border-bottom-right-radius: inherit;
-    border-bottom-left-radius: inherit; */
-   transform: none;
-   will-change: transform ,opacity;
-  
-}
-
-#services .box p{
-    font-family: 'Bree Serif', serif;
-
-} 
-#services-container{
-    /* background-color: rgb(84, 79, 79); */
-    margin: 0%;
-    padding: 0%;
-}
-
-
-/* Clients Section */
-#client-section{ 
-    position: relative;
-    /* background-color:  rgb(84, 79, 79); */
-    margin: 0px;
-    padding: 0px;
-}
-
-#client-section::before{
- content: "";
- position: absolute;
- background: url('../bg.jpg');
- width: 100%;
- height: 100%;
- z-index: -1;
- opacity: 0.3;
-}
-
-#clients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.client-item{
-    padding: 34px;
-}
-
-#clients img{
-    height: 124px;
-}
-
-
-/* Contact Section */
-#contact{
-    position: relative;
-    background-color: #080710;
-    width: 40%;
-    align-items: center;
-    border-radius: 50px;
-    margin-left: 20px;
-}
-#contact h3{
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-    color: antiquewhite;
-}
-#contact::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: url('../contact.jpg') no-repeat center center/cover;
-
-}
-#contact-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-    margin: 10px;
-    padding-top: 2px;
-    margin-top: 70px;
-}
-#contact-box input, 
-#contact-box textarea{
-    /* width: 100%;
-    padding: 0.5rem;
-    border-radius: 9px;
-    font-size: 1.1rem; */
-    display: block;
-    height: 50px;
-    width: 100%;
-    background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
-} 
-
-#contact-box form{
-    width: 40%;
-}
-
-#contact-box label{
-   /* font-size: 1.3rem;
-   font-family: 'Bree Serif', serif; */
-   display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 500;
-    color: antiquewhite;
+video{
+margin-left: 30px;
+border: 5px solid rgb(55, 112, 125);
 
 }
 
 
 
-footer{
-    background: black;
-    color: white;
-    padding: 9px 20px;
+
+
+
+#login{
+display:none;
+/* display: inline-flex; */
+height: 60px;
+width: 200px;
+border: 2px solid rgb(55, 112, 125);
+font-family: 'Poppins',sans-serif;
+color:rgb(55, 112, 125);
+text-transform: uppercase;
+text-decoration: none;
+font-size:20pxm;
+letter-spacing: 0.5px;
+align-items: center;
+justify-content: center;
+background-color: black;
+margin-left: 200px;
+margin-top: 250px;
 }
 
-/* Utility Classes */
-.h-primary{
-    font-family: 'Bree Serif', serif;
-    font-size: 3.8rem;
-    padding: 12px;
+/* username css */
+
+form{
+height: 520px;
+width: 400px;
+padding: 30px;
+background-color: rgba(255,255,255,0.13);
+/* position: absolute;
+transform: translate(-50%,-50%);
+top: 50%;
+left: 50%; */
+border-radius: 10px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.1);
+box-shadow: 0 0 40px rgba(8,7,16,0.6);
+margin-left: 180px;
+margin-top: 30px;
+background-color: rgba(255,255,255,0.13);
+
+}
+form *{
+font-family: 'Poppins',sans-serif;
+color: #ffffff;
+letter-spacing: 0.5px;
+outline: none;
+border: none;
+}
+form h3{
+font-size: 32px;
+font-weight: 500;
+line-height: 42px;
+text-align: center;
+color: rgb(55, 112, 125);
+}
+label{
+display: block;
+margin-top: 30px;
+font-size: 16px;
+font-weight: 500;
+}
+input{
+display: block;
+height: 50px;
+width: 96%;
+background-color: rgba(255,255,255,0.07);
+border-radius: 3px;
+padding: 0 10px;
+margin-top: 8px;
+font-size: 14px;
+font-weight: 300;
+}
+::placeholder{
+color: #e5e5e5;
 }
 
-.h-secondary{
-    font-family: 'Bree Serif', serif;
-    font-size: 2.3rem;
-    padding: 12px;
-}
+#play{
+text-decoration: none;
+border: 3px solid rgb(55, 112, 125);
+color: transparent;
+padding: 10px 40px;
+font-size: 20px;
+font-family: 'Poppins',sans-serif;
+letter-spacing: 0.5px;
+transition: all 0.5s;
+position: relative;
+margin-left: 200px;
+margin-bottom: 30px;
 
-.btn{
-    padding: 6px 20px;
-    border: 2px solid white;
-    background-color: brown;
-    color: white;
-    margin: 17px;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    cursor:pointer;
 }
+#play:before {
 
-.center{
-    text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+color: rgb(55, 112, 125);
+background: rgb(34, 34, 34);
+font-size: 20px;
+top: 0;
+left: 100%;
+font-family: 'Poppins',sans-serif;
+letter-spacing: 2px;
+transition: all 1s;
+height: 100%;
+width: 100%;
+position: absolute;
+transform: scale(0) rotatey(0);
+opacity: 0;
+}
+#play:hover:before {
+transform: scale(1) rotatey(360deg);
+left: 0;
+opacity: 1;
+}
+#play:after {
+content: "Login with Face Id";
+display: flex;
+justify-content: center;
+align-items: center;
+color: rgb(55, 112, 125);
+background: rgb(34, 34, 34);
+font-size: 20px;
+top: 0;
+left: 0;
+font-family: 'Poppins',sans-serif;
+letter-spacing: 2px;
+transition: all 1s;
+height: 100%;
+width: 100%;
+position: absolute;
+transform: scale(1) rotatey(0);
+opacity: 1;
 }
