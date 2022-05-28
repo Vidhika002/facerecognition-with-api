@@ -93,7 +93,7 @@ async function recognizeFaces() {
 document.getElementById("login").onclick = function() {myFunction()};
 
 function myFunction() {
-    window.open("https://zaykaa.vercel.app/", "_self")
+    window.open("https://web-beta-seven.vercel.app/", "_self")
 }
 
 function loadLabeledImages() {
